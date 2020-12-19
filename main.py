@@ -1,3 +1,4 @@
-from dream import normalize
-from dream import asleep
-from dream import wakeup
+from dream import normalize, asleep, wakeup
+
+
+

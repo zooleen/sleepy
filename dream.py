@@ -2,6 +2,8 @@ def normalize(mins):
     ### Преобразует входные минуты во время, отбрасывая сутки, если необходимо
     if mins > 1440:
         mins -= 1440
+    if mins <= 0:
+        mins += 1440
     return(str(mins//60) + ":" + str(mins%60))
 
 def asleep(hours, minutes):
