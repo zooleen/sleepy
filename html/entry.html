@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/dream' border="3">
+    <table>
+    <p>Используй эту форму для отправки значений:</p>
+    <tr>
+        <td>
+           
+                <p>Я хочу<select size="1" name="hero[]">
+                    <option value="asleep">лечь</option>
+                    <option selected value="wakeup">проснуться</option>
+                </select> в </p>
+                
+
+        </td>
+        <td>
+            <p>
+            <select>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+            </select>
+            часов, </p>
+        </td>
+        <td>
+            <p>
+            <select>
+                <option>0</option>
+                <option>5</option>
+                <option>10</option>
+                <option>15</option>
+                <option>20</option>
+                <option>25</option>
+                <option>30</option>
+                <option>35</option>
+                <option>40</option>
+                <option>45</option>
+                <option>50</option>
+                <option>55</option>
+            </select>
+            минут. 
+            </p>
+        </td>
+        <td>
+            <p><input type="submit" value="Отправить"></p>
+        </td>
+    </tr>
+    
+<p></p>
+<p></p>
+    
+</form>    
+{% endblock %}
