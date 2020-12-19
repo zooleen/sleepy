@@ -18,4 +18,5 @@ def do_calculate() -> str:
 def entry_page() -> 'html':
     return render_template('entry.html', the_title='Выспись!')
 
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True,host='0.0.0.0')
