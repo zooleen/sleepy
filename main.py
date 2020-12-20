@@ -10,9 +10,10 @@ def do_calculate() -> str:
     minutes = int(request.form['minutes'])
     if action == "asleep":
         answer = str(asleep(hours, minutes))
+        return render_template('results_asleep.html', the_title='Выспись!', the_answer=answer)
     if action == "wakeup":
         answer = str(wakeup(hours, minutes))
-    return render_template('results.html', the_title='Выспись!', the_answer=answer)
+        return render_template('results_wakeup.html', the_title='Выспись!', the_answer=answer)
 
 @app.route('/')
 def entry_page() -> 'html':

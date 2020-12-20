@@ -4,7 +4,7 @@ def normalize(mins):
         mins -= 1440
     if mins <= 0:
         mins += 1440
-    return(str(mins//60) + ":" + str(mins%60))
+    return(str(mins//60) + ":" + (str(mins%60) if len(str(mins%60)) == 2 else "0" + str(mins%60)))
 
 def asleep(hours, minutes):
     ### Returns the wake-up time after specified several sleep cycles.
