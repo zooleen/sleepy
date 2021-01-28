@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 from dream import normalize, asleep, wakeup
 from flask import Flask, render_template, request
 
