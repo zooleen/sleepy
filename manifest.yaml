@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sleepy-deployment
+  labels:
+    name: sleepy
+  namespace: sleepy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: sleepy
+  template:
+    metadata:
+      labels:
+        name: sleepy
+    spec:
+      containers:
+        - name: sleepy
+          image: zooleen/sleepy:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 500m
+              memory: 1000Mi
+            requests:
+              cpu: 300m
+              memory: 700Mi
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: sleepy-svc
+  labels:
+    name: sleepy
+  namespace: sleepy
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 5000
+  type: ClusterIP
+  selector:
+    name: sleepy
