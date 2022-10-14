@@ -1,6 +1,6 @@
 FROM python:3.8-slim-buster
 
-COPY my_flask_app /app
+COPY src /app
 
 WORKDIR /app 
 
