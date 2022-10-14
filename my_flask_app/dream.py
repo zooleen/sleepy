@@ -22,9 +22,7 @@ def wakeup(hours, minutes):
     # tim -- Time in Minutes
     tim = hours * 60 + minutes
     b = []
-    b.append(normalize(tim - 90 * 3))
-    b.append(normalize(tim - 90 * 4))
-    b.append(normalize(tim - 90 * 5))
-    b.append(normalize(tim - 90 * 6))
+    for i in range(3, 7):
+        b.append(normalize(tim - 90 * i))
+    
     return(b)
-
