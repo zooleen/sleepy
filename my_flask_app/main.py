@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 @app.route('/dream', methods=['POST'])
 def do_calculate() -> str:
+    """Get input values and render pages."""
     action = request.form['action']
     hours = int(request.form['hours'])
     minutes = int(request.form['minutes'])

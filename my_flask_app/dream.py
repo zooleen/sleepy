@@ -1,5 +1,5 @@
 def normalize(mins):
-    ### Преобразует входные минуты во время, отбрасывая сутки, если необходимо
+    """Преобразует входные минуты во время, отбрасывая сутки, если необходимо"""
     if mins > 1440:
         mins -= 1440
     if mins <= 0:
@@ -7,7 +7,7 @@ def normalize(mins):
     return((str(mins//60) if len(str(mins//60)) == 2 else "0" + str(mins//60)) + ":" + (str(mins%60) if len(str(mins%60)) == 2 else "0" + str(mins%60)))
 
 def asleep(hours, minutes):
-    ### Returns the wake-up time after specified several sleep cycles.
+    """Returns the wake-up time after specified several sleep cycles."""
     # tim -- Time in Minutes
     tim = hours * 60 + minutes
     b = []
@@ -19,7 +19,7 @@ def asleep(hours, minutes):
 
 
 def wakeup(hours, minutes):
-    ### Returns the wake-up time after specified several sleep cycles.
+    """Returns the wake-up time after specified several sleep cycles."""
     # tim -- Time in Minutes
     tim = hours * 60 + minutes
     b = []
