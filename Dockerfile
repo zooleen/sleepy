@@ -1,6 +1,4 @@
-FROM ubuntu:latest
-
-RUN apt-get update -y && apt-get install -y python3-pip python3-dev build-essential
+FROM python:3.8-slim-buster
 
 COPY my_flask_app /app
 
