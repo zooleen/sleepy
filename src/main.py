@@ -23,4 +23,4 @@ def entry_page() -> 'html':
     return render_template('entry.html', the_title='Выспись!')
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0')
+    app.run(debug=True,host='0.0.0.0',port=5080)
