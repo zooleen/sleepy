@@ -20,6 +20,7 @@ def do_calculate() -> str:
 
 @app.route('/')
 def entry_page() -> 'html':
+    """draw result page"""
     return render_template('entry.html', the_title='Выспись!')
 
 if __name__ == '__main__':
